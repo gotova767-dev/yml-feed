@@ -1,0 +1,30 @@
+name: Update Yandex Feed
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: pip install pandas requests
+      - name: Run script
+        env:
+          CSV_URL: ${{ secrets.GOOGLE_SHEET_CSV_URL }}
+        run: python scripts/generate_feed.py
+      - name: Commit and Push
+        run: |
+          git config --global user.name "Robot"
+          git config --global user.email "robot@github.com"
+          git add public/yandex-feed.xml
+          git commit -m "Update feed" || exit 0
+          git push
