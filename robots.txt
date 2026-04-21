@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Allow: /yandex-feed.xml
+Sitemap: https://alamatdomiki.ru/sitemap.xml
