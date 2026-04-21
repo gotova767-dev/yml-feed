@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2026-04-21T09:12:35">
+<yml_catalog date="2026-04-21T22:20:00">
   <shop>
     <name>Alamat Domiki</name>
-    <company>Alamat Domiki</company>
+    <company>База отдыха Аламат</company>
     <url>https://alamatdomiki.ru</url>
-    <currencies><currency id="RUR" rate="1"/></currencies>
-    <categories><category id="1">Аренда домиков</category></categories>
+    <currencies>
+      <currency id="RUR" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">Аренда домиков в Архызе</category>
+    </categories>
     <offers>
+      <offer id="1" available="true">
+        <url>https://alamatdomiki.ru</url>
+        <price>5000</price> <currencyId>RUR</currencyId>
+        <categoryId>1</categoryId>
+        <name>Уютный домик в Архызе на Софийской поляне (база Аламат)</name>
+        <description>Отдых в Архызе: уютные домики в лесу у реки. На территории подогреваемый бассейн, мангальные зоны. Идеально для семейного отдыха на Софийской поляне недорого.</description>
+        <picture>https://alamatdomiki.ru/favicon.ico</picture> </offer>
     </offers>
   </shop>
 </yml_catalog>
